@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mavenbird Technologies Private Limited
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mavenbird.com/Mavenbird-Module-License.txt
+ *
+ * =================================================================
+ *
+ * @category   Mavenbird
+ * @package    Mavenbird_Whatsapp
+ * @author     Mavenbird Team
+ * @copyright  Copyright © 2018-2024 Mavenbird Technologies Private Limited ( http://mavenbird.com )
+ * @license    http://mavenbird.com/Mavenbird-Module-License.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <!-- Mavenbird Extension Tab -->
+        <tab id="mavenbird_extension_tab" translate="label" sortOrder="100" class="mavenbird_mavenbird_logo">
+            <label>Mavenbird</label>
+        </tab>
+
+        <!-- WhatsApp Section -->
+        <section id="whatsappsection" translate="label" type="text" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Share on WhatsApp</label>
+            <tab>mavenbird_extension_tab</tab>
+            <resource>Mavenbird_WhatsApp::whatsapp_config</resource>
+            <group id="whatsappgroup" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                
+                <!-- Enable Field -->
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Select Yes to enable WhatsApp module on frontend.]]></comment>
+                </field>
+                
+                <!-- Display in All Products Field -->
+                <field id="dispayinall" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Share On WhatsApp Button In All Products</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[If set to <b>Yes</b>, WhatsApp share button will be displayed in all products. If set to <b>No</b>, WhatsApp share button will only be visible on products with "Share On WhatsApp" option enabled.]]></comment>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                
+                <!-- WhatsApp Button Size Field -->
+                <field id="whatsappbtn" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>WhatsApp Button Size</label>
+                    <source_model>Mavenbird\WhatsApp\Model\System\Config\Source\Whatsappbtn</source_model>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                
+                <!-- WhatsApp Button Label Field -->
+                <field id="whatsappbtnlabel" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>WhatsApp Button Label</label>
+                    <comment><![CDATA[Set WhatsApp Button Label.]]></comment>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                
+                <!-- Extra Text for WhatsApp Field -->
+                <field id="extratext" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Extra Text For WhatsApp</label>
+                    <comment><![CDATA[Set Extra Text For WhatsApp Share Message.]]></comment>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                
+            </group>
+        </section>
+    </system>
+</config>

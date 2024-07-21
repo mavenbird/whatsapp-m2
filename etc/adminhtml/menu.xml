@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mavenbird Technologies Private Limited
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mavenbird.com/Mavenbird-Module-License.txt
+ *
+ * =================================================================
+ *
+ * @category   Mavenbird
+ * @package    Mavenbird_Whatsapp
+ * @author     Mavenbird Team
+ * @copyright  Copyright (c) 2018-2024 Mavenbird Technologies Private Limited ( http://mavenbird.com )
+ * @license    http://mavenbird.com/Mavenbird-Module-License.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <!-- Mavenbird Extensions Menu Item -->
+        <add id="Mavenbird_Extensions::extensions" title="Mavenbird" module="Magento_Backend" sortOrder="10" resource="Mavenbird_Extensions::extensions" />
+
+        <!-- Mavenbird WhatsApp Menu Items -->
+        <add id="Mavenbird_WhatsApp::whatsapp" title="Share on WhatsApp" module="Mavenbird_WhatsApp" parent="Mavenbird_Extensions::extensions" sortOrder="5" resource="Mavenbird_WhatsApp::whatsapp" />
+        <add id="Mavenbird_WhatsApp::whatsapptitle" title="Share on WhatsApp" module="Mavenbird_WhatsApp" parent="Mavenbird_Extensions::extensions" sortOrder="5" resource="Mavenbird_WhatsApp::whatsapptitle" />
+        <add id="Mavenbird_WhatsApp::whatsapp_config" title="Configuration" module="Mavenbird_WhatsApp" sortOrder="10" parent="Mavenbird_WhatsApp::whatsapp" action="adminhtml/system_config/edit/section/whatsappsection" resource="Mavenbird_WhatsApp::whatsapp_config" />
+    </menu>
+</config>

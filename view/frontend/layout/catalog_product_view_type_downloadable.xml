@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mavenbird Technologies Private Limited
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mavenbird.com/Mavenbird-Module-License.txt
+ *
+ * =================================================================
+ *
+ * @category   Mavenbird
+ * @package    Mavenbird_Whatsapp
+ * @author     Mavenbird Team
+ * @copyright  Copyright (c) 2018-2024 Mavenbird Technologies Private Limited ( http://mavenbird.com )
+ * @license    http://mavenbird.com/Mavenbird-Module-License.txt
+ */
+ -->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="catalog_product_opengraph" />
+    <update handle="page_calendar"/>
+    <head>
+        <css src="Mavenbird_WhatsApp::css/whatsapp.css"/>
+    </head>
+    <body>
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Catalog\Block\Product\View" name="product.info.WhatsApp" template="Mavenbird_WhatsApp::whatsapp.phtml" after="product.info.overview">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Mavenbird\WhatsApp\ViewModel\WhatsApp</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

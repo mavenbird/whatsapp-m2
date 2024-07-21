@@ -1,0 +1,104 @@
+<?php
+/**
+ * Mavenbird Technologies Private Limited
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mavenbird.com/Mavenbird-Module-License.txt
+ *
+ * =================================================================
+ *
+ * @category   Mavenbird
+ * @package    Mavenbird_Whatsapp
+ * @author     Mavenbird Team
+ * @copyright  Copyright (c) 2018-2024 Mavenbird Technologies Private Limited ( http://mavenbird.com )
+ * @license    http://mavenbird.com/Mavenbird-Module-License.txt
+ */
+/** @var $viewModel \Mavenbird\WhatsApp\ViewModel\WhatsApp */
+$viewModel = $block->getViewModel();
+$helper = $viewModel->getHelper();
+$isenable = $helper->getConfig('whatsappsection/whatsappgroup/active');
+$moduleEnabled = $viewModel->isEnabled('Mavenbird_WhatsApp');
+if ($isenable && $moduleEnabled) {
+    $displayInAllEnable = $helper->getConfig('whatsappsection/whatsappgroup/dispayinall');
+    $buttonSize = $helper->getConfig('whatsappsection/whatsappgroup/whatsappbtn');
+    $buttonLabel = $helper->getConfig('whatsappsection/whatsappgroup/whatsappbtnlabel');
+    $productNameLabel = $helper->getConfig('whatsappsection/whatsappgroup/productnamelabel');
+    $productPriceLabel = $helper->getConfig('whatsappsection/whatsappgroup/productpricelabel');
+    $extraText = __($helper->getConfig('whatsappsection/whatsappgroup/extratext'));
+
+    /**
+     * Product Details
+     */
+    $_product = $block->getProduct();
+    $productWhatsAppEnable = $_product->getWhatsappProduct();
+    $productExtraText = __($_product->getWhatsappTextProduct());
+
+    if (trim($productExtraText) != "") {
+        $extraText .= " ".$productExtraText;
+    }
+
+    $price = $_product->getFinalPrice();
+    $productPrice = $helper->getProductPrice($price);
+
+    $currentUrl = $helper->getCurrentUrl();
+    ?>
+    <?php if ($productWhatsAppEnable || $displayInAllEnable) { ?>
+        <a href="#" data-text = '<?= /* @noEscape */ $extraText ?>'
+          data-link = "<?= /* @noEscape */ $currentUrl ?>"
+          class = "whatsapp w3-whatsapp-btn w3-whatsapp-btn-<?= $escaper->escapeHtml($buttonSize) ?>" target="_blank">
+          <?php if ($buttonLabel != "") { ?><span><?=$escaper->escapeHtml(__($buttonLabel)) ?></span><?php } ?>
+        </a>
+        <script>
+            require(['jquery'], function () {
+                jQuery(document).ready(function () {
+
+                    var isMobile = {
+                        Android: function () {
+                            return navigator.userAgent.match(/Android/i);
+                        },
+                        BlackBerry: function () {
+                            return navigator.userAgent.match(/BlackBerry/i);
+                        },
+                        iOS: function () {
+                            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                        },
+                        Opera: function () {
+                            return navigator.userAgent.match(/Opera Mini/i);
+                        },
+                        Windows: function () {
+                            return navigator.userAgent.match(/IEMobile/i);
+                        },
+                        any: function () {
+                            return (isMobile.Android() 
+                                || isMobile.BlackBerry()
+                                || isMobile.iOS()
+                                || isMobile.Opera()
+                                || isMobile.Windows()
+                                );
+                        }
+                    };
+                    jQuery(document).on("click", '.whatsapp', function () {
+                        var whatsapp_url = '';
+                        var text = jQuery(this).attr("data-text");
+                        var url = jQuery(this).attr("data-link");
+                        var message = encodeURIComponent(text) + " - " + encodeURIComponent(url);
+                        if (isMobile.any()) {
+                            whatsapp_url = "whatsapp://send?text=" + message;
+                            jQuery(".whatsapp").attr("href",whatsapp_url);
+                        } else {
+                            whatsapp_url = "https://web.whatsapp.com/send?text=" + message;
+                            jQuery(".whatsapp").attr("href",whatsapp_url);
+                        }
+
+                    });
+                });
+            });
+
+        </script>
+        <?php
+    }
+}

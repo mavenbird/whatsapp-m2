@@ -21,12 +21,9 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
     <menu>
-        <!-- Mavenbird Extensions Menu Item -->
-        <add id="Mavenbird_Extensions::extensions" title="Mavenbird" module="Magento_Backend" sortOrder="10" resource="Mavenbird_Extensions::extensions" />
+        <update id="Magento_Backend::mbmenu" title="Mavenbird" module="Magento_Backend" sortOrder="10" resource="Magento_Backend::mbmenu" />
 
-        <!-- Mavenbird WhatsApp Menu Items -->
-        <add id="Mavenbird_WhatsApp::whatsapp" title="Share on WhatsApp" module="Mavenbird_WhatsApp" parent="Mavenbird_Extensions::extensions" sortOrder="5" resource="Mavenbird_WhatsApp::whatsapp" />
-        <add id="Mavenbird_WhatsApp::whatsapptitle" title="Share on WhatsApp" module="Mavenbird_WhatsApp" parent="Mavenbird_Extensions::extensions" sortOrder="5" resource="Mavenbird_WhatsApp::whatsapptitle" />
-        <add id="Mavenbird_WhatsApp::whatsapp_config" title="Configuration" module="Mavenbird_WhatsApp" sortOrder="10" parent="Mavenbird_WhatsApp::whatsapp" action="adminhtml/system_config/edit/section/whatsappsection" resource="Mavenbird_WhatsApp::whatsapp_config" />
+        <add id="Mavenbird_WhatsApp::Heading" title="Whatsapp" module="Mavenbird_WhatsApp" sortOrder="20" parent="Magento_Backend::mbmenu" resource="Mavenbird_WhatsApp::Heading" />
+        <add id="Mavenbird_WhatsApp::configuration" title="Configuration" module="Mavenbird_WhatsApp" sortOrder="10" parent="Mavenbird_WhatsApp::Heading" action="adminhtml/system_config/edit/section/whatsappsection" resource="Mavenbird_WhatsApp::configuration" />
     </menu>
 </config>

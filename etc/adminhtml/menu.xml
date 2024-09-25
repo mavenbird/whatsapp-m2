@@ -23,7 +23,7 @@
     <menu>
         <update id="Magento_Backend::mbmenu" title="Mavenbird" module="Magento_Backend" sortOrder="10" resource="Magento_Backend::mbmenu" />
 
-        <add id="Mavenbird_WhatsApp::Heading" title="Whatsapp" module="Mavenbird_WhatsApp" sortOrder="20" parent="Magento_Backend::mbmenu" resource="Mavenbird_WhatsApp::Heading" />
+        <add id="Mavenbird_WhatsApp::Heading" title="Whatsapp Share" module="Mavenbird_WhatsApp" sortOrder="20" parent="Magento_Backend::mbmenu" resource="Mavenbird_WhatsApp::Heading" />
         <add id="Mavenbird_WhatsApp::configuration" title="Configuration" module="Mavenbird_WhatsApp" sortOrder="10" parent="Mavenbird_WhatsApp::Heading" action="adminhtml/system_config/edit/section/whatsappsection" resource="Mavenbird_WhatsApp::configuration" />
     </menu>
 </config>

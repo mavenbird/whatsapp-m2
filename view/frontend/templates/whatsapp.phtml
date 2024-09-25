@@ -49,7 +49,7 @@ if ($isenable && $moduleEnabled) {
     <?php if ($productWhatsAppEnable || $displayInAllEnable) { ?>
         <a href="#" data-text = '<?= /* @noEscape */ $extraText ?>'
           data-link = "<?= /* @noEscape */ $currentUrl ?>"
-          class = "whatsapp w3-whatsapp-btn w3-whatsapp-btn-<?= $escaper->escapeHtml($buttonSize) ?>" target="_blank">
+          class = "whatsapp mb-whatsapp-btn mb-whatsapp-btn-<?= $escaper->escapeHtml($buttonSize) ?>" target="_blank">
           <?php if ($buttonLabel != "") { ?><span><?=$escaper->escapeHtml(__($buttonLabel)) ?></span><?php } ?>
         </a>
         <script>

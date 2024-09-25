@@ -17,7 +17,7 @@
  * @license    http://mavenbird.com/Mavenbird-Module-License.txt
  */
 
-.w3-whatsapp-btn {
+.mb-whatsapp-btn {
     background-image: url('../images/whatsapp-icon.png');
     border: 1px solid rgba(0, 0, 0, 0.1);
     display: inline-block;
@@ -36,7 +36,7 @@
     box-sizing: border-box;
 }
 
-.w3-whatsapp-btn-small {
+.mb-whatsapp-btn-small {
     font-size: 12px;
     background-size: 16px;
     background-position: 7px 6px;
@@ -45,7 +45,7 @@
     line-height: 20px;
 }
 
-.w3-whatsapp-btn-medium {
+.mb-whatsapp-btn-medium {
     font-size: 14px;
     background-size: 18px;
     background-position: 9px 7px;
@@ -54,7 +54,7 @@
     line-height: 28px;
 }
 
-.w3-whatsapp-btn-large {
+.mb-whatsapp-btn-large {
     font-size: 16px;
     background-size: 20px;
     background-position: 12px 13px;
@@ -62,11 +62,11 @@
     height: 46px;
     line-height: 34px;
 }
-.w3-whatsapp-btn-large span, .w3-whatsapp-btn-medium span, .w3-whatsapp-btn-small span {
+.mb-whatsapp-btn-large span, .mb-whatsapp-btn-medium span, .mb-whatsapp-btn-small span {
 	padding-left: 5px;
 }
 
-.w3-whatsapp-btn:hover {
+.mb-whatsapp-btn:hover {
     color: #fff;
     text-decoration: none;
 }
@@ -76,7 +76,7 @@
 .product-addto-links a {
     margin-bottom: 10px;
 }
-.w3-whatsapp-btn{
+.mb-whatsapp-btn{
     color: #fff !important;
     text-decoration: none;
 }

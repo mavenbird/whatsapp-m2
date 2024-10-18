@@ -24,6 +24,11 @@
                         </resource>
                     </resource>
                 </resource>
+                <resource id="Magento_Backend::mbmenu" title="Mavenbird" sortOrder="10">
+                    <resource id="Mavenbird_WhatsApp::Heading" title="Whatsapp Share" sortOrder="20">
+                        <resource id="Mavenbird_WhatsApp::configuration" title="Configuration" sortOrder="10"/>
+                    </resource>
+                </resource>
             </resource>
         </resources>
     </acl>

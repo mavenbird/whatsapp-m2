@@ -43,20 +43,20 @@ This extension is compatible with Magento 2.x versions, ensuring seamless integr
 **Install via composer (recommended)**
 ~~~~~~~~~~~~~~~~~~~~~
 composer require mavenbird/whatsapp
-php bin/magento setup
-php bin/magento setup:static-content
-php bin/magento setup:di
-php bin/magento cache
+php bin/magento setup:upgrade
+php bin/magento setup:di:compile
+php bin/magento setup:static-content:deploy
+php bin/magento cache:flush
 ~~~~~~~~~~~~~~~~~~~~~
 
 ## Upgrade/Update Module:
 Run the following command in Magento 2 root folder for easy update -
 ~~~~~~~~~~~~~~~~~~~~~
 composer update mavenbird/whatsapp
-php bin/magento setup
-php bin/magento setup:static-content
-php bin/magento setup:di
-php bin/magento cache
+php bin/magento setup:upgrade
+php bin/magento setup:di:compile
+php bin/magento setup:static-content:deploy
+php bin/magento cache:flush
 ~~~~~~~~~~~~~~~~~~~~~
 
 

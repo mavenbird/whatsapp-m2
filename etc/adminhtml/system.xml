@@ -27,7 +27,7 @@
         <section id="whatsappsection" translate="label" type="text" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="1">
             <tab>mavenbird</tab>
             <label>Share on WhatsApp</label>
-            <resource>Mavenbird_WhatsApp::whatsapp_config</resource>
+            <resource>Mavenbird_WhatsApp::configuration</resource>
             <group id="whatsappgroup" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
                 

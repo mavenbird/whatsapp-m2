@@ -14,19 +14,19 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Mavenbird_Extensions::extensions" title="Mavenbird" sortOrder="168231">
+                <!-- <resource id="Mavenbird_Extensions::extensions" title="Mavenbird" sortOrder="168231">
                     <resource id="Mavenbird_WhatsApp::whatsapp" title="Whats App" sortOrder="25"/>
+                </resource> -->
+                <resource id="Magento_Backend::mbmenu" title="Mavenbird" sortOrder="10">
+                    <resource id="Mavenbird_WhatsApp::Heading" title="Whatsapp Share" sortOrder="20">
+                        <resource id="Mavenbird_WhatsApp::configuration" title="Configuration" sortOrder="10"/>
+                    </resource>
                 </resource>
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
                             <resource id="Mavenbird_WhatsApp::whatsapp_config" title="Whats App Section"/>
                         </resource>
-                    </resource>
-                </resource>
-                <resource id="Magento_Backend::mbmenu" title="Mavenbird" sortOrder="10">
-                    <resource id="Mavenbird_WhatsApp::Heading" title="Whatsapp Share" sortOrder="20">
-                        <resource id="Mavenbird_WhatsApp::configuration" title="Configuration" sortOrder="10"/>
                     </resource>
                 </resource>
             </resource>

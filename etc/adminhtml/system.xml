@@ -33,7 +33,7 @@
                 
                 <!-- Enable Field -->
                 <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Enable</label>
+                    <label>Enable Extension</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment><![CDATA[Select Yes to enable WhatsApp module on frontend.]]></comment>
                 </field>

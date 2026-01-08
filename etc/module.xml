@@ -20,5 +20,5 @@
  */
  -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">
-    <module name="Mavenbird_WhatsApp" setup_version="1.1.0"/>
+    <module name="Mavenbird_WhatsApp" setup_version="1.1.1"/>
 </config>

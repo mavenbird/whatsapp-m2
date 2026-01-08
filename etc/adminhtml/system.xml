@@ -28,6 +28,11 @@
             <tab>mavenbird</tab>
             <label>Share on WhatsApp</label>
             <resource>Mavenbird_WhatsApp::configuration</resource>
+            <group id="branding" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Branding</label>
+                <frontend_model>Mavenbird\WhatsApp\Block\Adminhtml\Render\Header</frontend_model>
+            </group>
             <group id="whatsappgroup" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
                 

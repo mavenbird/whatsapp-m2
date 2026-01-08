@@ -2,7 +2,8 @@
     "name": "mavenbird/whatsapp",
     "description": "Share on WhatsApp extension for Magento 2 allows customer to share and promote their products on WhatsApp with just one touch.",
     "require": {
-        "php": ">=8.0.0"
+        "php": ">=8.0.0",
+        "mavenbird/module-core": "*"
     },
     "type": "magento2-module",
     "version": "1.1.1",
